@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills & Profile</title>
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    body {
+      padding: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.8rem 1.2rem;
+      border: 2px solid currentColor;
+      border-radius: 12px;
+      box-shadow: 0 0 12px currentColor;
+      color: inherit;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: var(--nav-hover-bg-dark);
+      box-shadow: 0 0 18px currentColor, 0 0 10px currentColor inset;
+      outline: none;
+    }
+
+    .skills-section {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .skills-section h2,
+    .skills-section li {
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .skills-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 1rem 0;
+    }
+
+    .skills-section li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .theme-switch-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    #theme-btn {
+      background-color: var(--button-bg-dark);
+      color: var(--button-text-dark);
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 10px currentColor, inset 0 0 5px currentColor;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body.light-theme #theme-btn {
+      background-color: var(--button-bg-light);
+      color: var(--button-text-light);
+    }
+
+    #theme-btn:hover,
+    #theme-btn:focus {
+      background-color: var(--nav-hover-bg-dark);
+      box-shadow: 0 0 20px currentColor, inset 0 0 10px currentColor;
+      outline: none;
+    }
+
+    body.light-theme #theme-btn:hover,
+    body.light-theme #theme-btn:focus {
+      background-color: var(--nav-hover-bg-light);
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <nav class="nav">
+    <a href="index2.html">Home</a>
+    <a href="contact.html">Contact Info</a>
+    <a href="introduction.html">Introduction</a>
+  </nav>
+
+  <section class="skills-section" style="color: black;">
+    <h2>↪જ⁀➴ Academic Background</h2>
+    <ul>
+      <li>10th Passed from CBSE Boards (58.2%)</li>
+      <li>12th Passed from CBSE Boards (68%) (Commerce without Maths & Website Applications)</li>
+    </ul>
+
+    <h2>↪જ⁀➴ Technical Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Fast website builder with functional output</li>
+      <li>Good computer knowledge & AI integration experience</li>
+      <li>Studying Angular (SoloLearn) + building personal app</li>
+      <li>Strong aesthetic sense for UI design</li>
+      <li>Experience collaborating online and independently</li>
+      <li>Creative + consistent learner (daily streaks 🎯)</li>
+      <li>fast typing speed 48 WPM (214 CPM) with 100% accuracy</li>
+    </ul>
+
+    <h2>↪જ⁀➴ Extras</h2>
+    <ul>
+      <li>Strong aesthetic sense for UI design</li>
+      <li>Experience collaborating online and independently</li>
+      <li>Creative + consistent learner (daily streaks 🎯)</li>
+    </ul>
+  </section>
+
+  <div class="theme-switch-container">
+    <button id="theme-btn" onclick="toggleTheme()">Switch Theme</button>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('light-theme');
+      body.classList.toggle('dark-theme');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+:root {
+  --bg-color-dark: #000;
+  --text-color-dark: #ff2a68;
+  --glow-color-dark: #ff2a68;
+  --nav-hover-bg-dark: #44001a;
+  --button-bg-dark: #220014;
+  --button-text-dark: #ff2a68;
+  --marquee-bg-dark: #110007;
+
+  --bg-color-light: #f0f8ff;
+  --text-color-light: #004bba;
+  --glow-color-light: #004bba;
+  --nav-hover-bg-light: #a5c8ff;
+  --button-bg-light: #c0d8ff;
+  --button-text-light: #004bba;
+  --marquee-bg-light: #d0e4ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  background-image: url('https://i.pinimg.com/736x/e4/60/75/e460759774158d10ed8f44ba6bdd99ec.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color-dark);
+  transition: background-image 0.5s ease, color 0.5s ease;
+}
+
+body.light-theme {
+  background-image: url('https://i.pinimg.com/736x/08/e2/8b/08e28ba587a19724133db00336218148.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color-light);
+}
+
+
+body.dark-theme {
+  background-image: url('https://i.pinimg.com/736x/e4/60/75/e460759774158d10ed8f44ba6bdd99ec.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color-dark);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+#name {
+  font-size: 2rem;
+  font-weight: bold;
+  user-select: none;
+  text-shadow: 0 0 8px currentColor, 0 0 15px currentColor;
+}
+
+#arrow {
+  width: 60px;
+  height: 60px;
+  user-select: none;
+  filter: drop-shadow(0 0 2px currentColor);
+}
+
+#photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid currentColor;
+  box-shadow: 0 0 10px currentColor;
+  user-select: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid currentColor;
+  border-radius: 12px;
+  box-shadow: 0 0 12px currentColor;
+  color: inherit;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--nav-hover-bg-dark);
+  box-shadow: 0 0 18px currentColor, 0 0 10px currentColor inset;
+  outline: none;
+}
+
+body.light-theme nav a:hover,
+body.light-theme nav a:focus {
+  background-color: var(--nav-hover-bg-light);
+}
+
+#marquee-container {
+  background-color: var(--marquee-bg-dark);
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px currentColor;
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+body.light-theme #marquee-container {
+  background-color: var(--marquee-bg-light);
+}
+
+marquee {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: inherit;
+  text-shadow: 0 0 5px currentColor;
+}
+
+#theme-btn {
+  background-color: var(--button-bg-dark);
+  color: var(--button-text-dark);
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px currentColor, inset 0 0 5px currentColor;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  margin-bottom: 3rem;
+}
+
+body.light-theme #theme-btn {
+  background-color: var(--button-bg-light);
+  color: var(--button-text-light);
+}
+
+#theme-btn:hover,
+#theme-btn:focus {
+  background-color: var(--nav-hover-bg-dark);
+  box-shadow: 0 0 20px currentColor, inset 0 0 10px currentColor;
+  outline: none;
+}
+
+body.light-theme #theme-btn:hover,
+body.light-theme #theme-btn:focus {
+  background-color: var(--nav-hover-bg-light);
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    width: 100%;
+  }
+  #arrow, #photo {
+    width: 60px;
+    height: 60px;
+  }
+  #name {
+    font-size: 1.4rem;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #marquee-container {
+    width: 100%;
+  }
+}

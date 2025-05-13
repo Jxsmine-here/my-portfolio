@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Custom Website</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="dark-theme">
+  <header>
+    <div id="name">Jasmine Manocha</div>
+    <img id="arrow" src="https://i.pinimg.com/originals/0f/e4/7d/0fe47da19fbc2daa9c48fe6cac4e3265.gif" alt="Arrow" />
+    <img id="photo" src="C:\Users\hp\Downloads\me.webp" alt="Your Photo" />
+  </header>
+
+  <nav>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact Info</a>
+    <a href="introduction.html">Introduction</a>
+  </nav>
+
+  <div id="marquee-container">
+    <marquee>✨ Welcome to My Cool Website ✨</marquee>
+  </div>
+
+  <button id="theme-btn" aria-label="Toggle Color Theme">Switch Theme</button>
+
+  <script>
+    const btn = document.getElementById('theme-btn');
+    btn.addEventListener('click', () => {
+      if(document.body.classList.contains('dark-theme')) {
+        document.body.classList.remove('dark-theme');
+        document.body.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.body.classList.remove('light-theme');
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.body.classList.remove('dark-theme', 'light-theme');
+        document.body.classList.add(savedTheme);
+      }
+    });
+  </script>
+</body>
+</html>
