@@ -196,4 +196,19 @@ body.light-theme #theme-btn:focus {
   display: block;
   margin: 10px auto;    
 }
+#arrow,
+#photo {
+  display: block;
+  margin: 0 auto;
+}
+
+#arrow {
+  margin-bottom: 5px; /* reduce 
+  width: 80px;
+}
+
+#photo {
+  width: 150px;
+  border-radius: 50%;
+}
 
