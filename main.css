@@ -189,3 +189,11 @@ body.light-theme #theme-btn:focus {
     width: 100%;
   }
 }
+#photo {
+  width: 150px;          
+  height: auto;
+  border-radius: 50%;   
+  display: block;
+  margin: 10px auto;    
+}
+
